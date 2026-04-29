@@ -2,7 +2,7 @@
 // Author : Yoann LAMY <https://github.com/ynlamy/packer-rockylinux10>
 // Licence : GPLv3
 
-// Packer : https://www.packer.io/
+// Packer : https://developer.hashicorp.com/packer/
 
 packer {
   required_version = ">= 1.7.0"
@@ -17,19 +17,19 @@ packer {
 variable "iso" {
   type        = string
   description = "A URL to the ISO file"
-  default     = "https://download.rockylinux.org/pub/rocky/10/isos/x86_64/Rocky-10.0-x86_64-minimal.iso"
+  default     = "https://download.rockylinux.org/pub/rocky/10/isos/x86_64/Rocky-10.1-x86_64-minimal.iso"
 }
 
 variable "checksum" {
   type        = string
   description = "The checksum for the ISO file"
-  default     = "sha256:de75c2f7cc566ea964017a1e94883913f066c4ebeb1d356964e398ed76cadd12"
+  default     = "sha256:5aafc2c86e606428cd7c5802b0d28c220f34c181a57eefff2cc6f65214714499"
 }
 
 variable "headless" {
   type        = bool
   description = "When this value is set to true, the machine will start without a console"
-  default     = false
+  default     = true
 }
 
 variable "name" {
